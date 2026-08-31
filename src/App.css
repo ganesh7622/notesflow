@@ -1,0 +1,2089 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.nav-section {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.nav-bar {
+  width: 100%;
+  min-height: 70px;
+  padding: 0 8%;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+  background: #fff;
+}
+
+/* Logo + NotesFlow */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-brand img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.nav-heading {
+  margin: 0;
+  font-size: 24px;
+  color: #0f172a;
+}
+
+
+/* =========================
+   DESKTOP MENU
+========================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  margin: 0 0 0 auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+
+/* Signup */
+.sign-btn {
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+.nav-links li .sign-btn {
+  color: white;
+}
+
+.sign-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.hamburger {
+  display: none;
+
+  margin-left: auto;
+
+  border: none;
+  background: transparent;
+
+  color: #0f172a;
+
+  font-size: 26px;
+
+  cursor: pointer;
+
+  padding: 5px;
+
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+}
+
+.hamburger:hover {
+  color: #2563eb;
+}
+
+
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .nav-bar {
+    min-height: 65px;
+    padding: 0 20px;
+  }
+
+  .nav-brand img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-heading {
+    font-size: 21px;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+
+  /* Hide menu initially */
+  .nav-links {
+    position: absolute;
+
+    top: 65px;
+    right: 20px;
+
+    width: 190px;
+
+    padding: 20px;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    background: #fff;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    /* Hidden */
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+
+  /* Show menu */
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+
+    width: 100%;
+
+    padding: 8px 0;
+
+    font-size: 15px;
+  }
+
+  .sign-btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .nav-bar {
+    padding: 0 15px;
+  }
+
+  .nav-heading {
+    font-size: 20px;
+  }
+
+  .nav-brand {
+    gap: 7px;
+  }
+
+  .nav-brand img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hamburger {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    right: 15px;
+    width: 180px;
+  }
+}
+
+/* =========================
+   HOME SECTION
+========================= */
+
+.home-section {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 8%;
+
+  text-align: center;
+
+  background: linear-gradient(135deg,
+      #f8fafc 0%,
+      #e0f2fe 50%,
+      #dbeafe 100%);
+}
+
+.home-section h1 {
+  max-width: 850px;
+
+  margin: 0 0 25px;
+
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.1;
+  font-weight: 800;
+
+  color: #0f172a;
+}
+
+.home-section>p {
+  max-width: 750px;
+
+  margin: 0 auto 35px;
+
+  font-size: 18px;
+  line-height: 1.8;
+
+  color: #475569;
+}
+
+
+/* Button */
+
+.btn-1 {
+  padding: 14px 32px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.btn-1:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.btn-1:active {
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  width: 100%;
+  padding: 50px 8% 20px;
+  background: #0f172a;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* Footer main content */
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.footer-content h2 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.footer-content p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Footer links */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 40px 30px 20px;
+  }
+
+  .footer-content {
+    max-width: 500px;
+
+  }
+
+  .footer-content h2 {
+    font-size: 25px;
+  }
+
+  .footer-content p {
+    font-size: 14px;
+  }
+
+  .footer-links {
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  @media (max-width: 480px) {
+
+    .footer {
+      padding: 35px 20px 18px;
+      text-align: left;
+    }
+
+    .footer-content {
+      width: 100%;
+      margin: 0 0 25px;
+      text-align: left;
+    }
+
+    .footer-content h2 {
+      font-size: 23px;
+      text-align: left;
+    }
+
+    .footer-content p {
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    /* Links on left side */
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 14px;
+      margin-bottom: 25px;
+      text-align: left;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      text-align: left;
+    }
+
+    /* Copyright on left side */
+    .footer-bottom {
+      padding-top: 18px;
+      text-align: left;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: left;
+    }
+  }
+}
+
+/* =================================
+   Notes Section
+================================= */
+
+.notes-section {
+  position: relative;
+
+  min-height: 75vh;
+  padding: 120px 7%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* =================================
+   Notes Content
+================================= */
+
+.notes-content {
+  width: 55%;
+  max-width: 680px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.notes-content h1 {
+  margin: 0 0 18px;
+
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.notes-content p {
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =================================
+   Notes Points
+================================= */
+
+.notes-points {
+  width: 55%;
+  max-width: 650px;
+
+  margin: 25px 0 0;
+  padding: 0;
+
+  list-style: none;
+
+  position: relative;
+  z-index: 2;
+}
+
+.notes-points li {
+  margin-bottom: 11px;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* =================================
+   Buttons Container
+================================= */
+
+.notes-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-top: 22px;
+
+  position: relative;
+  z-index: 3;
+}
+
+
+/* =================================
+   See Notes Button
+================================= */
+
+.see-note-btn {
+  min-width: 220px;
+
+  padding: 14px 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #6366f1;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.22);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.see-note-btn:hover {
+  background: #5558e8;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(99, 102, 241, 0.32);
+}
+
+.see-note-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =================================
+   Add Note Button
+================================= */
+
+.add-note-btn {
+  position: relative;
+
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #6366f1;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.22);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.add-note-btn:hover {
+  background: #5558e8;
+
+  transform: translateY(-3px) rotate(90deg);
+
+  box-shadow: 0 12px 25px rgba(99, 102, 241, 0.32);
+}
+
+.add-note-btn:active {
+  transform: scale(0.94);
+}
+
+
+/* =================================
+   Homepage Image
+================================= */
+
+.homepage-picture {
+  position: absolute;
+
+  top: 50%;
+  right: 7%;
+
+  transform: translateY(-50%);
+
+  width: min(32vw, 360px);
+  height: min(32vw, 360px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1;
+}
+
+.homepage-picture img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 20px 30px rgba(99, 102, 241, 0.18));
+
+  transition: transform 0.4s ease;
+}
+
+.homepage-picture:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =================================
+   Tablet
+   769px - 1024px
+================================= */
+
+@media (max-width: 1024px) {
+
+  .notes-section {
+    min-height: 70vh;
+
+    padding: 70px 6%;
+  }
+
+  .notes-content {
+    width: 58%;
+  }
+
+  .notes-content h1 {
+    font-size: 40px;
+  }
+
+  .notes-content p {
+    font-size: 16px;
+  }
+
+  .notes-points {
+    width: 58%;
+  }
+
+  .notes-points li {
+    font-size: 15px;
+  }
+
+  .homepage-picture {
+    right: 5%;
+
+    width: 280px;
+    height: 280px;
+  }
+
+}
+
+
+/* =================================
+   Mobile
+   481px - 768px
+================================= */
+
+@media (max-width: 768px) {
+
+  .notes-section {
+    min-height: auto;
+
+    padding: 60px 6% 70px;
+
+    align-items: stretch;
+  }
+
+
+  /* Content */
+
+  .notes-content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .notes-content h1 {
+    margin-bottom: 15px;
+
+    font-size: 35px;
+  }
+
+  .notes-content p {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+
+  /* Points */
+
+  .notes-points {
+    width: 100%;
+    max-width: none;
+
+    margin-top: 22px;
+  }
+
+  .notes-points li {
+    margin-bottom: 10px;
+
+    font-size: 15px;
+  }
+
+
+  /* Buttons */
+
+  .notes-actions {
+    margin-top: 22px;
+  }
+
+  .see-note-btn {
+    min-width: 200px;
+
+    padding: 13px 22px;
+
+    font-size: 15px;
+  }
+
+  .add-note-btn {
+    width: 52px;
+    height: 52px;
+
+    font-size: 29px;
+  }
+
+
+  /* Image */
+
+  .homepage-picture {
+    display: none;
+  }
+
+}
+
+
+/* =================================
+   Small Mobile
+   0px - 480px
+================================= */
+
+@media (max-width: 480px) {
+
+  .notes-section {
+    padding: 45px 20px 60px;
+  }
+
+
+  /* Content */
+
+  .notes-content h1 {
+    font-size: 29px;
+    line-height: 1.25;
+  }
+
+  .notes-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+
+  /* Points */
+
+  .notes-points {
+    margin-top: 20px;
+  }
+
+  .notes-points li {
+    margin-bottom: 9px;
+
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+
+  /* Buttons */
+
+  .notes-actions {
+    width: 100%;
+
+    gap: 10px;
+
+    margin-top: 22px;
+  }
+
+  .see-note-btn {
+    flex: 1;
+
+    min-width: 0;
+    width: auto;
+
+    padding: 14px 12px;
+
+    font-size: 15px;
+  }
+
+  .add-note-btn {
+    width: 50px;
+    height: 50px;
+
+    font-size: 27px;
+  }
+
+
+  /* Image */
+
+  .homepage-picture {
+    display: none;
+  }
+
+}
+
+
+/* =================================
+   Extra Small
+   0px - 360px
+================================= */
+
+@media (max-width: 360px) {
+
+  .notes-section {
+    padding: 40px 16px 55px;
+  }
+
+  .notes-content h1 {
+    font-size: 26px;
+  }
+
+  .notes-content p {
+    font-size: 14px;
+  }
+
+  .notes-points li {
+    font-size: 13px;
+  }
+
+
+  .notes-actions {
+    gap: 8px;
+  }
+
+  .see-note-btn {
+    padding: 13px 10px;
+
+    font-size: 14px;
+  }
+
+  .add-note-btn {
+    width: 47px;
+    height: 47px;
+
+    font-size: 25px;
+  }
+
+
+  .homepage-picture {
+    width: 170px;
+    height: 170px;
+
+    margin-top: 35px;
+  }
+
+}
+
+
+/* ================= Popup Notes ================ */
+
+.note-popup-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  z-index: 1000;
+}
+
+.note-popup {
+  position: relative;
+
+  width: 90%;
+  max-width: 500px;
+
+  padding: 30px;
+
+  background: #fff;
+  border-radius: 15px;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.note-popup h2 {
+  margin-bottom: 25px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  border: none;
+  background: transparent;
+
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.input-group textarea {
+  resize: none;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancel-btn,
+.save-note-btn {
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cancel-btn {
+  background: #e5e7eb;
+}
+
+.save-note-btn {
+  background: #6366f1;
+  color: white;
+}
+
+/* Saved Notes Section */
+
+.saved-notes-section {
+  min-height: 100vh;
+  padding: 10% 8%;
+
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 40px;
+  padding: 12px 22px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #1e293b;
+  color: white;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: translateX(-5px);
+}
+
+/* Notes Grid */
+
+.notes-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  width: 100%;
+}
+
+/* Note Card */
+
+.note-card {
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 25px;
+  margin-top: 50px;
+  border-radius: 15px;
+
+  background: white;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s ease;
+
+  overflow: hidden;
+}
+
+.note-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Note Title */
+
+.note-card h2 {
+  margin-bottom: 15px;
+
+  font-size: 24px;
+
+  word-break: break-word;
+}
+
+/* Note Content */
+
+.note-card p {
+  flex: 1;
+
+  margin-bottom: 25px;
+
+  line-height: 1.6;
+
+  word-break: break-word;
+}
+
+/* Edit Button */
+
+.edit-note-btn {
+  align-self: flex-start;
+
+  padding: 10px 22px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #6366f1;
+  color: white;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.edit-note-btn:hover {
+  transform: translateY(-2px);
+}
+
+.note-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: auto;
+}
+
+.edit-note-btn,
+.delete-note-btn {
+  padding: 11px 24px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+/* Edit */
+
+.edit-note-btn {
+  border: none;
+
+  background: #6366f1;
+  color: white;
+}
+
+.edit-note-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Delete */
+
+.delete-note-btn {
+  border: 1px solid #ef4444;
+
+  background: #ef4444;
+  color: white;
+}
+
+.delete-note-btn:hover {
+  background: #ef4444;
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+
+  .note-actions {
+    width: 100%;
+  }
+
+  .edit-note-btn,
+  .delete-note-btn {
+    flex: 1;
+
+    padding: 12px 10px;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .saved-notes-section {
+    padding: 100px 5%;
+  }
+
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .saved-notes-section {
+    min-height: 100vh;
+
+    padding: 100px 20px;
+  }
+
+  .back-btn {
+    width: 100%;
+
+    justify-content: center;
+
+    margin-bottom: 30px;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .note-card {
+    min-height: 200px;
+
+    padding: 20px;
+  }
+
+  .note-card h2 {
+    font-size: 21px;
+  }
+
+}
+
+
+/* =================================
+   Contact Section
+================================= */
+
+.contact-section {
+  width: 100%;
+  min-height: 70vh;
+
+  padding: 80px 7%;
+
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  gap: 80px;
+}
+
+
+/* =================================
+   Left Side
+================================= */
+
+.contact-info {
+  width: 100%;
+  max-width: 560px;
+}
+
+.contact-tag {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  padding: 7px 14px;
+
+  border-radius: 20px;
+
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contact-info h1 {
+  margin: 0 0 20px;
+
+  font-size: 50px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.contact-info>p {
+  max-width: 520px;
+
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =================================
+   Social Links
+================================= */
+
+.social-links {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #6366f1;
+  color: #ffffff;
+
+  font-size: 15px;
+
+  text-decoration: none;
+
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #5558e8;
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 25px rgba(99, 102, 241, 0.3);
+}
+
+
+/* =================================
+   Contact Box - Right Side
+================================= */
+
+.contact-box {
+  width: 100%;
+  margin-top: 7%;
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  border: 1px solid rgba(99, 102, 241, 0.12);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.contact-box h2 {
+  margin: 0 0 8px;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.contact-box-text {
+  margin: 0 0 25px;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =================================
+   Form
+================================= */
+
+.contact-box form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px 16px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #1f2937;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-box input {
+  height: 52px;
+}
+
+.contact-box textarea {
+  min-height: 145px;
+
+  resize: vertical;
+}
+
+.contact-box input::placeholder,
+.contact-box textarea::placeholder {
+  color: #9ca3af;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+
+/* =================================
+   Submit Button
+================================= */
+
+.contact-box button {
+  width: 100%;
+  height: 52px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #6366f1;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(99, 102, 241, 0.2);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-box button:hover {
+  background: #5558e8;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(99, 102, 241, 0.3);
+}
+
+.contact-box button:active {
+  transform: translateY(0);
+}
+
+
+/* =================================
+   Tablet
+================================= */
+
+@media (max-width: 1024px) {
+
+  .contact-section {
+    padding: 65px 6%;
+
+    gap: 45px;
+  }
+
+  .contact-info h1 {
+    font-size: 42px;
+  }
+
+  .contact-info>p {
+    font-size: 16px;
+  }
+
+  .contact-box {
+    padding: 30px;
+  }
+
+}
+
+
+/* =================================
+   Mobile
+   481px - 768px
+================================= */
+
+@media (max-width: 768px) {
+
+  .contact-section {
+    min-height: auto;
+
+    padding: 55px 6% 70px;
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .contact-info {
+    max-width: 100%;
+
+    text-align: center;
+  }
+
+  .contact-info h1 {
+    font-size: 36px;
+  }
+
+  .contact-info>p {
+    max-width: 600px;
+
+    margin: auto;
+
+    font-size: 16px;
+  }
+
+  .social-links {
+    justify-content: center;
+
+    margin-top: 25px;
+  }
+
+  .contact-box {
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 28px;
+  }
+
+}
+
+
+/* =================================
+   Small Mobile
+================================= */
+
+@media (max-width: 480px) {
+
+  .contact-section {
+    padding: 45px 20px 60px;
+
+    gap: 35px;
+  }
+
+  .contact-tag {
+    font-size: 11px;
+
+    padding: 6px 12px;
+  }
+
+  .contact-info h1 {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+  }
+
+  .contact-info>p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .social-links {
+    gap: 11px;
+
+    margin-top: 22px;
+  }
+
+  .social-links a {
+    width: 45px;
+    height: 45px;
+
+    font-size: 19px;
+  }
+
+  .contact-box {
+    padding: 22px 18px;
+
+    border-radius: 16px;
+  }
+
+  .contact-box h2 {
+    font-size: 23px;
+  }
+
+  .contact-box-text {
+    font-size: 13px;
+
+    margin-bottom: 20px;
+  }
+
+  .contact-box form {
+    gap: 14px;
+  }
+
+  .contact-box input {
+    height: 49px;
+  }
+
+  .contact-box input,
+  .contact-box textarea {
+    padding: 13px;
+
+    font-size: 14px;
+  }
+
+  .contact-box textarea {
+    min-height: 125px;
+  }
+
+  .contact-box button {
+    height: 49px;
+
+    font-size: 15px;
+  }
+
+}
+
+
+/* =================================
+   Extra Small
+================================= */
+
+@media (max-width: 360px) {
+
+  .contact-section {
+    padding: 40px 16px 50px;
+  }
+
+  .contact-info h1 {
+    font-size: 27px;
+  }
+
+  .contact-info>p {
+    font-size: 14px;
+  }
+
+  .contact-box {
+    padding: 20px 15px;
+  }
+
+  .contact-box h2 {
+    font-size: 21px;
+  }
+
+}
+
+
+/* ================ Signup page ================ */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 35px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.login-form img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.login-form .sign-heading {
+  margin: 0 0 10px;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+.login-form input:focus {
+  border-color: #6366f1;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background: #4f46e5;
+}
+
+.login-form p {
+  margin: 5px 0 0;
+  text-align: center;
+  color: #666;
+}
+
+.login-form a {
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ==================== LOGOUT BUTTON ==================== */
+
+.logout-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+}
+
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+  .logout-btn {
+    width: 100%;
+    padding: 11px 18px;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  .logout-btn:hover {
+    transform: none;
+  }
+}
+
+/* =========================
+   REGISTER PAGE
+========================= */
+
+.signup-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  background: #f5f7ff;
+}
+
+.signup-container form {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo */
+
+.signup-container form img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Heading / Text */
+
+.signup-container form p:first-of-type {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 25px;
+  text-align: center;
+}
+
+/* Inputs */
+
+.signup-container form input {
+  width: 100%;
+  height: 48px;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+
+  font-size: 15px;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.signup-container form input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Register Button */
+
+.signup-container form button {
+  width: 100%;
+  height: 48px;
+  margin-top: 5px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #6366f1;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup-container form button:hover {
+  background: #4f46e5;
+  transform: translateY(-1px);
+}
+
+/* Bottom text */
+
+.signup-container form p:last-child {
+  margin: 20px 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.signup-container form p:last-child a {
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-container form p:last-child a:hover {
+  text-decoration: underline;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .signup-container {
+    padding: 25px 15px;
+  }
+
+  .signup-container form {
+    max-width: 400px;
+    padding: 30px 25px;
+  }
+
+  .signup-container form img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .signup-container form p:first-of-type {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .signup-container {
+    min-height: 100dvh;
+    padding: 20px 15px;
+  }
+
+  .signup-container form {
+    width: 100%;
+    padding: 25px 20px;
+    border-radius: 15px;
+  }
+
+  .signup-container form img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .signup-container form p:first-of-type {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .signup-container form input {
+    height: 46px;
+    font-size: 14px;
+  }
+
+  .signup-container form button {
+    height: 46px;
+    font-size: 15px;
+  }
+
+  .signup-container form p:last-child {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+  .signup-container {
+    padding: 15px 10px;
+  }
+
+  .signup-container form {
+    padding: 22px 15px;
+  }
+
+  .signup-container form p:first-of-type {
+    font-size: 17px;
+  }
+
+  .signup-container form input {
+    height: 44px;
+  }
+
+  .signup-container form button {
+    height: 44px;
+  }
+}
