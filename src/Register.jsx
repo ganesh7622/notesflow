@@ -67,7 +67,7 @@ function Register() {
 
     try {
       const response = await fetch(
-        "https://notesflow-backend-7gcj.onrender.com/api/auth/login",
+        "https://notesflow-backend-7gcj.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {
