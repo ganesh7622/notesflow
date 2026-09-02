@@ -56,7 +56,7 @@ function Notes() {
       try {
 
         const response = await fetch(
-          `http://localhost:5000/api/notes/${userId}`
+         `https://notesflow-backend-7gcj.onrender.com/api/notes/${userId}`
         );
 
         const data = await response.json();
@@ -119,7 +119,7 @@ function Notes() {
       if (editingId !== null) {
 
         const response = await fetch(
-          `http://localhost:5000/api/notes/${editingId}`,
+          `https://notesflow-backend-7gcj.onrender.com/api/notes/${editingId}`,
           {
             method: "PUT",
 
@@ -153,7 +153,7 @@ function Notes() {
         // ==================== CREATE NOTE ====================
 
         const response = await fetch(
-          "http://localhost:5000/api/notes",
+          "https://notesflow-backend-7gcj.onrender.com/api/notes",
           {
             method: "POST",
 
@@ -242,7 +242,7 @@ function Notes() {
     try {
 
       const response = await fetch(
-        `http://localhost:5000/api/notes/${id}`,
+        `https://notesflow-backend-7gcj.onrender.com/api/notes/${id}`,
         {
           method: "DELETE",
 
